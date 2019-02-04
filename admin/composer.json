@@ -1,0 +1,13 @@
+{
+    "name": "hasanmisbah/blogo-admin",
+    "description": "Blogo Admin Panel",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hasan Misbah",
+            "email": "hasanmisbah01@gmail.com"
+        }
+    ],
+    "require": {}
+}

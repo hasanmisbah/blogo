@@ -1,0 +1,441 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Area || Boots admin</title>
+
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-default" id="main-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+            aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Boots Admin</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Dashboard</a></li>
+            <li><a href="./pages.html">Pages</a></li>
+            <li><a href="post.html">Posts</a></li>
+            <li><a href="users.html">Users</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Welcome, Admin</a></li>
+            <li><a href="login.html">Logout</a></li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+            <h1> <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard <small>Manage Your Site</small> </h1>
+          </div>
+          <div class="col-md-2">
+            <div class="dropdown create">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="true">
+                Create Content
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a type="button" data-toggle="modal" data-target="#addpost">Add Post</a></li>
+                <li><a type="button" data-toggle="modal" data-target="#addpages">Add Pages</a></li>
+                <li><a type="button" data-toggle="modal" data-target="#adduser">Add User</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="active">Dashboard</li>
+        </ol>
+      </div>
+    </section>
+    <main>
+      <section id="main">
+        <div class="container">
+          <div class="row">
+
+            <!-- sidebar area -->
+            <div class="col-md-3 sidebar">
+              <div class="list-group">
+                <a href="index.html" class="list-group-item active">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>  Dashboard
+                </a>
+                <a href="pages.html" class="list-group-item"> <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>  Pages <span class="badge">12</span></a>
+                <a href="posts.html" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>  Posts <span class="badge">150</span></a>
+                <a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Users <span class="badge">18</span></a>
+                <a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>  Categorys <span class="badge">18</span></a>
+                <a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>  Comments <span class="badge">18</span></a>
+              </div>
+              <div class="well">
+                <h4>Disk Usage</h4>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                    60%
+                  </div>
+                </div>
+                <h4>Bandwith used</h4>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                    40%
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end Sidebar area -->
+
+            <!-- main Content Area -->
+            <div class="col-md-9 main-content-area">
+              <!-- overview panel -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Website Overview</h3>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-3 dash-dash-icon text-center">
+                      <div class="well">
+                        <h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 203</h4>
+                        <h2>Users</h2>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="well dash-dash-icon text-center">
+                        <h4><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> 203</h4>
+                        <h2>Pages</h2>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="well dash-dash-icon text-center">
+                        <h4><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 203</h4>
+                        <h2>Posts</h2>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="well dash-dash-icon text-center">
+                        <h4><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> 12500</h4>
+                        <h2>Comments</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end overview -->
+
+              <!-- Latest Blog Post -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Latest Post</h3>
+                </div>
+                <div class="panel-body">
+                  <table class="table table-striped table-hover">
+                    <tr>
+                      <th>Post Title</th>
+                      <th>Posted By</th>
+                      <th>Posted on</th>
+                      <th>Action</th>
+                    </tr>
+                    <tr>
+                      <td>Lorem Title one</td>
+                      <td>John Doe</td>
+                      <td>31-dec-2012</td>
+                      <td><a href="#"><span class="glyphicon glyphicon-expand" aria-hidden="true"></span></a> | <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+                    </tr>
+                    <tr>
+                      <td>Lorem Title two</td>
+                      <td>John Doe</td>
+                      <td>31-dec-2012</td>
+                      <td><a href="#"><span class="glyphicon glyphicon-expand" aria-hidden="true"></span></a> | <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+                    </tr>
+                    <tr>
+                      <td>Lorem Title three</td>
+                      <td>John Doe</td>
+                      <td>31-dec-2012</td>
+                      <td><a href="#"><span class="glyphicon glyphicon-expand" aria-hidden="true"></span></a> | <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <!-- end Latest Blog post -->
+
+              <!-- latest Comment Area -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Latest Comment</h3>
+                </div>
+                <div class="panel-body">
+                  <table class="table table-striped table-hover">
+                    <tr>
+                      <th>Comment</th>
+                      <th>Commented By</th>
+                      <th>Commented on</th>
+                      <th>Action</th>
+                    </tr>
+                    <tr>
+                      <td>Lorem ipsum dolor sit amet consectetur officiis.....</td>
+                      <td>Jane Doe</td>
+                      <td>31-dec-2012</td>
+                      <td><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></a> | <a href="#"><span
+                            class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+                    </tr>
+                    <tr>
+                      <td>Lorem ipsum dolor sit amet consectetur, officiis.....</td>
+                      <td>Jane Doe</td>
+                      <td>31-dec-2012</td>
+                      <td><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></a> | <a href="#"><span class="glyphicon glyphicon-remove"
+                            aria-hidden="true"></span></a></td>
+                    </tr>
+                    <tr>
+                      <td>Lorem ipsum dolor sit amet consectetur, officiis.....</td>
+                      <td>Jane Doe</td>
+                      <td>31-dec-2012</td>
+                      <td><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></a> | <a href="#"><span class="glyphicon glyphicon-remove"
+                            aria-hidden="true"></span></a></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <!-- Latest Comment area -->
+
+              <!-- latest Users Panel -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Users</h3>
+                </div>
+                <div class="panel-body">
+                  <table class="table table-striped table-hover">
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Joined</th>
+                    </tr>
+                    <tr>
+                      <td>John doe</td>
+                      <td>user@domain.com</td>
+                      <td>31-dec-2012</td>
+                    </tr>
+                    <tr>
+                      <td>John Doe</td>
+                      <td>user@domain.com</td>
+                      <td>31-dec-2012</td>
+                    </tr>
+                    <tr>
+                      <td>John doe</td>
+                      <td>user@domain.com</td>
+                      <td>31-dec-2012</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <!-- End User panel -->
+
+            </div>
+            <!-- end Main Content Area -->
+
+          </div>
+        </div>
+      </section>
+
+
+
+    </main>
+    <footer id="footer" class="container-fluid">
+      <div class="container">
+        <p class="text-center">Copyright &copy; Boots Admin || 2018</p>
+      </div>
+    </footer>
+
+
+
+          <!-- Modal -->
+
+          <!-- add page modal -->
+          <div class="modal fade" id="addpages" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <form action="#">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Add Pages</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="">Pages Title</label>
+                      <input type="text" name="page-title" class="form-control" placeholder="Page Title">
+                    </div>
+                    <div class="form-group">
+                      <label for="">Pages Body</label>
+                      <textarea name="pageeditor" class="form-control" placeholder="Your Post"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Pages Meta Tag</label>
+                      <input type="text" name="page-meta-tag" class="form-control" placeholder="Page Meta tag">
+                    </div>
+                    <div class="form-group">
+                      <label for="">Pages Meta Description</label>
+                      <input type="text" name="page-meta-desc" class="form-control" placeholder="Page Meta Description">
+                    </div>
+                    <div class="form-group"></div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- End Add Pages Modal -->
+
+          <!-- add post modal -->
+          <div class="modal fade" id="addpost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <form action="#">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Add Post</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="">Post Title</label>
+                      <input type="text" name="post-title" class="form-control" placeholder="post Title">
+                    </div>
+                    <div class="form-group">
+                      <label for="">Post Body</label>
+                      <textarea name="posteditor" class="form-control" placeholder="Your Post"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Post Category</label>
+                      <select class="form-control">
+                        <option>World News</option>
+                        <option>Sports</option>
+                        <option>Entertainment</option>
+                        <option>Campus News</option>
+                        <option>Politics</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Post Meta Tag</label>
+                      <input type="text" name="post-meta-tag" class="form-control" placeholder="Post Meta tag">
+                    </div>
+                    <div class="form-group">
+                      <label for="">post Meta Description</label>
+                      <input type="text" name="post-meta-desc" class="form-control" placeholder="Post Meta Description">
+                    </div>
+                    <div class="form-group"></div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- End Add post Modal -->
+
+          <!-- add user modal -->
+          <div class="modal fade" id="adduser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <form action="#">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Add user</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="">Name</label>
+                      <input type="text" name="user-name" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="">User Name</label>
+                      <input type="text" name="username" class="form-control" placeholder="User Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="">Email</label>
+                      <input type="email" name="email" class="form-control" placeholder="User Email">
+                    </div>
+                    <div class="form-group">
+                      <label for="">password</label>
+                      <input type="password" name="password" class="form-control" placeholder="User Password">
+                    </div>
+                    <div class="form-group">
+                      <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="user"> User
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Admin"> Admin
+                      </label>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- End Add user Modal -->
+
+
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!-- <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script> -->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/plugins.js -->
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+    <script>
+      CKEDITOR.replace('pageeditor');
+      CKEDITOR.replace('posteditor');
+    </script>
+  </body>
+</html>
